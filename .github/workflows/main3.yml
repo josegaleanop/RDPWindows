@@ -28,7 +28,7 @@ jobs:
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp 3389"'
     - name: Download Important Files.
       run: |
-        Invoke-WebRequest https://drive.google.com/uc?id=1dj5GdQSBW7S7bbfkMikMe-rPWINFnVPA  -OutFile loop.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/josegaleanop/RDPWindows/main/loop.bat  -OutFile loop.bat
     - name: Download Timeout Script
       run: Invoke-WebRequest https://raw.githubusercontent.com/josegaleanop/RDPWindows/main/Timeout.ps1 -OutFile timeout.ps1
     - name: Keep Alive
